@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style1.css">
+    <title>Omar Phones & Accessories</title>
+</head>
+<body>
+
+    <!-- First Navbar -->
+    <nav class="navbar navbar-top">
+        <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Home</a></li>
+            <li><a href="products.html" class="navbar-link">Products</a></li>
+            <li><a href="Contact.html" class="navbar-link">Contact</a></li>
+            <li><a href="authPage.html" class="navbar-link">Become a Retailer</a></li>
+        </ul>
+    </nav>
+
+    <!-- Second Navbar -->
+    <nav class="navbar navbar-bottom">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" class="logo-link"><img class="logo" src="./images/logo.png" alt="logo"></a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+
+            <!-- Cart Icon -->
+            <div class="cart-icon">
+                <a href="cart.html">🛒</a>
+            </div>
+
+            <!-- Sign In Button -->
+            <div class="sign-in-btn">
+                <a href="authPage.html" class="sign-in-link">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="auth-section">
+        <div class="auth-container">
+            <!-- Tab Navigation -->
+            <div class="tab-nav">
+                <button class="tab-button active" onclick="showSignIn()">Sign In</button>
+                <button class="tab-button" onclick="showSignUp()">Sign Up</button>
+            </div>
+
+            <!-- Sign In Form -->
+            <div id="signInForm" class="form-container">
+                <h2>Sign In</h2>
+                <form action="#" method="POST">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="submit-btn">Sign In</button>
+                    <p class="switch-form">Don't have an account? <span onclick="showSignUp()">Sign Up</span></p>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signUpForm" class="form-container" style="display: none;">
+                <h2>Sign Up</h2>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Phone Number" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <textarea placeholder="Address" rows="4" required></textarea>
+                    <div class="terms-container">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                    <p class="switch-form">Already have an account? <span onclick="showSignIn()">Sign In</span></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showSignIn() {
+            document.getElementById("signInForm").style.display = "block";
+            document.getElementById("signUpForm").style.display = "none";
+            document.querySelector(".tab-button.active").classList.remove("active");
+            document.querySelectorAll(".tab-button")[0].classList.add("active");
+        }
+
+        function showSignUp() {
+            document.getElementById("signInForm").style.display = "none";
+            document.getElementById("signUpForm").style.display = "block";
+            document.querySelector(".tab-button.active").classList.remove("active");
+            document.querySelectorAll(".tab-button")[1].classList.add("active");
+        }
+    </script>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <img src="./images/logo.png" alt="Company Logo">
+            <p>We provide the best products for all your needs. Shop now and enjoy exclusive offers!</p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <!-- Support Section -->
+        <div class="footer-support">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Download App Section -->
+        <div class="footer-download">
+            <h3>Download Our App</h3>
+            <div class="app-links">
+                <a href="#" class="app-store-link">
+                    <img src="app-store.png" alt="Download on the App Store">
+                </a>
+                <a href="#" class="app-store-link">
+                    <img src="google-play.png" alt="Get it on Google Play">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-copyright">
+        <p>&copy; 2024 eCommerce Inc. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

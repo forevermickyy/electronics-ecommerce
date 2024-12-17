@@ -1,0 +1,724 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for navbars */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 5px 0;
+}
+
+.navbar-top {
+    border-bottom: 2px solid #444; /* Border between navbars */
+}
+
+/* Make the first navbar sticky */
+.navbar-top {
+    position: sticky; /* Makes the navbar stick to the top */
+    top: 0; /* Sticks it at the very top of the viewport */
+    z-index: 1000; /* Ensures it stays above other elements */
+     
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+/* Additional styles for better design */
+.navbar-list {
+    display: flex; /* Makes the navbar items display in a row */
+    justify-content: space-around; /* Space between navbar links */
+    margin: 0;
+    padding: 10px 0;
+    list-style: none; /* Removes bullets from list */
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #333; /* Navbar link color */
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #6a0dad; /* Hover effect with violet color */
+}
+
+
+.navbar-bottom {
+    border-top: 2px solid #444;
+}
+
+/* Navbar container to manage layout */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo{
+    width: 200px;
+    height: 70px;
+}
+
+/* Styling for Logo */
+.logo .logo-link {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Styling for Search Bar */
+.search-bar input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Styling for Cart Icon */
+.cart-icon a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Styling for Sign In Button */
+.sign-in-btn .sign-in-link {
+    color: white;
+    background-color: violet;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sign-in-btn .sign-in-link:hover {
+    background-color: darkviolet;
+    transform: scale(1.05);
+}
+
+/* Navbar List styling for first navbar */
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.navbar-link:hover {
+    background-color: #555;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    flex-wrap: wrap; 
+}
+
+.hero-content {
+    max-width: 50%;
+    padding-right: 30px;
+    margin-left: 100px;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.hero-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 70px;
+    padding: 12px 25px;
+    background-color: violet;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: darkviolet;
+}
+
+/* Hero Image */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* cards  */
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    margin-left: 100px;
+    padding: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Container for the product cards */
+.products {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.product-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Styling for individual product card */
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Hover effect to lift the card */
+}
+
+/* Image inside the card */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card content (name and price) */
+.product-card .card-content {
+    padding: 15px;
+}
+
+.product-card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-card .card-price {
+    font-size: 18px;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Link styling */
+.product-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Slightly smaller grid items */
+    }
+
+    .product-card .card-title {
+        font-size: 18px; /* Smaller title font size */
+    }
+
+    .product-card .card-price {
+        font-size: 16px; /* Smaller price font size */
+    }
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply to entire body via auth-section */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;  /* Light gray background for the entire page */
+    font-family: Arial, sans-serif;
+}
+
+/* Auth Container */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Navigation */
+.tab-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.tab-button.active {
+    border-color: #4CAF50;
+}
+
+.tab-button:hover {
+    color: #4CAF50;
+}
+
+/* Form Containers */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.switch-form {
+    text-align: center;
+    font-size: 14px;
+}
+
+.switch-form span {
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+.switch-form span:hover {
+    text-decoration: underline;
+}
+
+/* Terms and Conditions */
+.terms-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-container input {
+    width: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .auth-section {
+        padding: 15px;  /* Optional: Adjust padding for mobile */
+    }
+
+    .auth-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Section Container */
+.image-text-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between image and text */
+    padding: 20px;
+}
+
+/* Image Styling */
+.image-container img {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+/* Text Container */
+.text-container {
+    max-width: 500px;
+}
+
+.section-header {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-text-section {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-logo {
+    flex: 1;
+    max-width: 250px;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-social,
+.footer-support,
+.footer-download {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-social h3,
+.footer-support h3,
+.footer-download h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-social ul,
+.footer-support ul {
+    list-style: none;
+}
+
+.footer-social ul li,
+.footer-support ul li {
+    margin-bottom: 10px;
+}
+
+.footer-social ul li a,
+.footer-support ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-social ul li a:hover,
+.footer-support ul li a:hover {
+    color: #fff;
+}
+
+.app-links {
+    display: flex;
+    gap: 15px;
+}
+
+.app-store-link img {
+    width: 130px;
+    height: auto;
+}
+
+/* Copyright Section */
+.footer-copyright {
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-copyright p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-social,
+    .footer-support,
+    .footer-download {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .app-links {
+        justify-content: center;
+    }
+
+    .app-store-link img {
+        width: 110px;
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Banner Styling */
+.banner {
+    background-color: #4CAF50; /* Green background for the banner */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offer {
+    max-width: 400px;
+}
+
+.offer h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    font-size: 16px;
+    color: #f0f0f0;
+}
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .offer h2 {
+        font-size: 24px;
+    }
+
+    .newsletter-form input {
+        width: 200px;
+    }
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .hero-title {
+        font-size: 28px; /* Reduce font size on smaller screens */
+    }
+
+    .hero-text {
+        font-size: 16px; /* Smaller text on smaller screens */
+    }
+
+    .cta-btn {
+        padding: 10px 20px; /* Adjust button padding */
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 24px; /* Further reduce font size on very small screens */
+    }
+
+    .hero-text {
+        font-size: 14px; /* Smaller text on very small screens */
+    }
+
+    .cta-btn {
+        padding: 8px 15px; /* Smaller button */
+    }
+}
